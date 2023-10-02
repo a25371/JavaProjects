@@ -1,4 +1,49 @@
-#imagenRover{
-max-width: 30%;
-max-height: 30%;
+body {
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.data-container{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    border: #000000 solid 5px;
+    width: 30%;
+}
+
+.rover-photo {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+}
+
+.rover-photo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.rover-details {
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .rover-photo {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .rover-photo {
+        width: 100%;
+    }
 }

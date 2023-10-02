@@ -26,6 +26,7 @@ fetch(apiUrl)
     var divImg = document.getElementById("container");
     var cad = "";
     for (var contador = 0; contador < 50; contador++) {
+      cad +=  '<div class="data-container">';
       cad +=  '<div class="rover-photo">';
       cad +=    '<img id="imagenRover" src="' + data.photos[contador].img_src + '" alt="Mars Rover Photo">';
       cad +=    '<p>Earth Date: ' + data.photos[contador].earth_date + '</p>';
@@ -34,7 +35,7 @@ fetch(apiUrl)
       cad +=    '<p>Camera: ' + data.photos[contador].camera.full_name + '</p>';
       cad +=    '<p>Rover Name: ' + data.photos[contador].rover.name + '</p>';
       cad +=  '</div>';
-      cad +=  '<hr>';
+      cad +=  '</div>';
     };
     divImg.innerHTML = cad;
   })
